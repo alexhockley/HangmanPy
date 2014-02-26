@@ -3,16 +3,17 @@ import hangman
 
 game = hangman.Hangman("test",5)
 
+#loops until game is done
 while True:
-    status = game.isDone()
+    status = game.isDone() #checks if done
     if (status == 1):
-	print "You win"
-	break
+	    print "You win"
+	    break
     if(status == -1):
         print "You lose"
         break
 
-    print "".join(game.display)
+    print "".join(game.display)#prints the display list as a string
 
     guess = raw_input("Enter your guess: ")
     
